@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+}
+
+.vi_presentaacion{
+    width: 80%;
+    margin: auto;
+}
+
+/*comienza menu*/
+.nav-bar {
+    background: #444;
+    padding: 20px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    width: 100%;
+    
+}
+.menu, .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu {
+    background: #555;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.5s;
+}
+.menu_link {
+    display: block;
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.menu_link:hover {
+    background: #444;
+}
+.submenu .menu_link:hover {
+    background: #222;
+}
+
+.submenu {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.submenu, .menu_link {
+    background: #333;
+    padding-left: 50px;
+}
+.mostrar {
+    margin-left: 0;
+    transition: all 0.3s;
+}
+
+
+@media(min-width: 1024px) {
+    .nav-bar {
+        display: none;
+    }
+    .menu {
+        margin-left: 0;
+        display: flex;
+    }
+    .container-submenu {
+        position: relative;
+    }
+    .submenu {
+        position: absolute;
+        top: 60px;
+        width: 180%;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .container-submenu:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+/*aqui termina el menu*/
+
+/*aca empieza el slider*/
+.slider {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 20s infinite alternate;
+    animation-timing-function: ease;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+.slider img {
+    width: 100%;
+}
+
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+/*aqui cierra el slider*/
+
+/*comienza pie de pagina*/
+.pie-pagina {
+    width: 100%;
+    background-color: #0a141d;
+    margin: auto;
+}
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: aqua;
+}
+.pie-pagina .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+@media screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}   
+
+.logo {
+    margin: auto;
+}
+/*termina pie de pagina*/
+
+.tablas {
+    width: 100%;
+    color: maroon;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 50px;
+}
+.tablas th {
+    text-align: center;
+    color: black;
+    font-family: cursive;
+}
+.tablas td, .tablas th {
+    padding: 12px 15px;
+}
+body{
+    background: url(imagenes/fondo4.jpg);
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
